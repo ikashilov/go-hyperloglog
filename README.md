@@ -2,8 +2,9 @@
 
 The Golang HyperLogLog implementation from the [original paper](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)
 
-**HyperLogLog** is an algorithm for the count-distinct problem, approximating the number of distinct elements in a multise
+**HyperLogLog** is an algorithm for the count-distinct problem, approximating the number of distinct elements in a multiset
 
+### Example
 The usage is quite simple:
 ```go
     var someData []string
