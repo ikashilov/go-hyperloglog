@@ -9,7 +9,7 @@ The usage is quite simple:
     var someData []string
     // fill or obtain someData
 
-    hll, err := NewHyperLogLog(.001)
+    hll, err := hyperloglog.New(.001)
     if err != nil {
         log.Fatalln(err)
     }

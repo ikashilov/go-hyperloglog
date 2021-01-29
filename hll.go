@@ -1,4 +1,4 @@
-package main
+package hyperloglog
 
 import (
 	"errors"
@@ -17,10 +17,10 @@ type HyperLogLog struct {
 	registers []uint8
 }
 
-// NewHyperLogLog cretaes a new HLL estimator with a given precision (error).
+// New creates a new HLL estimator with a given precision (error).
 // The `good` value for error is (0.01 - 0.0001)
 // Smaller values will case more memory usage
-func NewHyperLogLog(err float64) (*HyperLogLog, error) {
+func New(err float64) (*HyperLogLog, error) {
 
 	if err > 0.01 || err < 0.00001 {
 		return nil, errors.New("invalied value of err. err should be in (0.1, 0.0001)")
